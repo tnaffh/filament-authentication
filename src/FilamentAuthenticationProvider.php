@@ -4,14 +4,14 @@ namespace Phpsa\FilamentAuthentication;
 
 use Filament\Facades\Filament;
 use Filament\Navigation\UserMenuItem;
-use Filament\PluginServiceProvider;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Facades\Config;
 use Phpsa\FilamentAuthentication\Http\Middleware\ImpersonatingMiddleware;
 use Phpsa\FilamentAuthentication\Widgets\LatestUsersWidget;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentAuthenticationProvider extends PluginServiceProvider
+class FilamentAuthenticationProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-authentication';
 

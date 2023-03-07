@@ -6,9 +6,9 @@ use Filament\Forms\Components\BelongsToManyMultiSelect;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\TextInput;
-use Filament\Resources\Form;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Phpsa\FilamentAuthentication\Resources\RoleResource\Pages\CreateRole;
 use Phpsa\FilamentAuthentication\Resources\RoleResource\Pages\EditRole;
@@ -34,7 +34,7 @@ class RoleResource extends Resource
         return strval(__('filament-authentication::filament-authentication.section.role'));
     }
 
-    protected static function getNavigationGroup(): ?string
+    public static function getNavigationGroup(): ?string
     {
         return strval(__('filament-authentication::filament-authentication.section.group'));
     }

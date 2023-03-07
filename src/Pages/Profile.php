@@ -30,7 +30,7 @@ class Profile extends Page
      */
     public array $formData;
 
-    protected static function shouldRegisterNavigation(): bool
+    public static function shouldRegisterNavigation(): bool
     {
         return false;
     }
@@ -83,7 +83,7 @@ class Profile extends Page
         return static::getUrl();
     }
 
-    protected function getBreadcrumbs(): array
+    public function getBreadcrumbs(): array
     {
         return [
             url()->current() => 'Profile',

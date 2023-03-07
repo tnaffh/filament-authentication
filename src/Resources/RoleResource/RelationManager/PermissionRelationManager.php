@@ -3,13 +3,13 @@
 namespace Phpsa\FilamentAuthentication\Resources\RoleResource\RelationManager;
 
 use Filament\Forms\Components\TextInput;
-use Filament\Resources\Form;
-use Filament\Resources\RelationManagers\BelongsToManyRelationManager;
-use Filament\Resources\Table;
+use Filament\Forms\Form;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\Permission\PermissionRegistrar;
 
-class PermissionRelationManager extends BelongsToManyRelationManager
+class PermissionRelationManager extends BelongsTo
 {
     protected static string $relationship = 'permissions';
 
